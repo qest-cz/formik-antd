@@ -21,10 +21,10 @@ export const Cascader = ({
     }: FieldProps) => (
       <$Cascader
         value={value}
-        onChange={(value) => {
+        onChange={(value: any) => {
           setFieldValue(name, value)
           setFieldTouched(name, true, false)
-          onChange && onChange(value, null)
+          onChange && onChange(value, null as any)
         }}
         {...restProps}
       />
