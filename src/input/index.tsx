@@ -15,7 +15,7 @@ export type InputProps = FormikFieldProps & $InputProps
 
 interface InputType
   extends React.ForwardRefExoticComponent<
-    FormikFieldProps & $InputProps & React.RefAttributes<$Input>
+    FormikFieldProps & $InputProps & React.RefAttributes<any>
   > {
   Password: React.ForwardRefExoticComponent<
     FormikFieldProps & $PasswordProps & React.RefAttributes<unknown>
@@ -35,7 +35,7 @@ const Input = React.forwardRef(
       onBlur: $onBlur,
       ...restProps
     }: InputProps,
-    ref: React.Ref<$Input>,
+    ref: React.Ref<any>,
   ) => (
     <Field name={name} validate={validate} fast={fast}>
       {({ field: { value, onChange, onBlur } }: FieldProps) => (
@@ -70,7 +70,7 @@ TypedInput.Password = React.forwardRef(
       onBlur: $onBlur,
       ...restProps
     }: PasswordProps,
-    ref: React.Ref<unknown>,
+    ref: React.Ref<any>,
   ) => (
     <Field name={name} validate={validate} fast={fast}>
       {({ field: { value, onChange, onBlur } }: FieldProps) => (
