@@ -33,7 +33,9 @@ export const DatePicker = ({
       field: { value },
       form: { setFieldValue, setFieldTouched },
     }: FieldProps) => (
+      //@ts-ignore
       <$DatePicker
+        //@ts-ignore
         value={value ? moment(value) : undefined}
         onChange={(date, dateString) => {
           setFieldValue(name, date ? date.toISOString(keepOffset) : null)
@@ -60,7 +62,9 @@ DatePicker.MonthPicker = ({
       field: { value },
       form: { setFieldValue, setFieldTouched },
     }: FieldProps) => (
+      //@ts-ignore
       <$MonthPicker
+        //@ts-ignore
         value={value ? moment(value) : undefined}
         onChange={(date, dateString) => {
           setFieldValue(name, date ? date.toISOString(keepOffset) : null)
@@ -84,6 +88,7 @@ DatePicker.RangePicker = ({
       field: { value },
       form: { setFieldValue, setFieldTouched },
     }: FieldProps) => (
+      //@ts-ignore
       <$RangePicker
         name={name}
         value={value}
@@ -109,6 +114,7 @@ DatePicker.WeekPicker = ({
       field: { value },
       form: { setFieldValue, setFieldTouched },
     }: FieldProps) => (
+      //@ts-ignore
       <$WeekPicker
         name={name}
         value={value}

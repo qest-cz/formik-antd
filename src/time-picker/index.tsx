@@ -23,6 +23,7 @@ export const TimePicker = ({
       form: { setFieldValue, setFieldTouched },
     }: FieldProps) => (
       <$TimePicker
+        //@ts-ignore
         value={value ? moment(value) : undefined}
         onChange={(time, timeString) => {
           setFieldValue(name, time ? time.toISOString(keepOffset) : null)

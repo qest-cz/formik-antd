@@ -11,6 +11,7 @@ export function ArrayButton({
   onClick: (arrayProps: FieldArrayRenderProps) => void
 } & Omit<ButtonProps, 'onClick'>) {
   return (
+    //@ts-ignore
     <FieldArray name={name}>
       {(array) => <Button {...restProps} onClick={() => onClick(array)} />}
     </FieldArray>

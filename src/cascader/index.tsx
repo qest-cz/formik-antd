@@ -4,7 +4,7 @@ import { FieldProps } from 'formik'
 import { FormikFieldProps } from '../FieldProps'
 import Field from '../field'
 import { CascaderProps as $CascaderProps } from 'antd/lib/cascader'
-
+//@ts-ignore
 export type CascaderProps = FormikFieldProps & $CascaderProps<any>
 
 export const Cascader = ({
